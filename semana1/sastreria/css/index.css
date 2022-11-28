@@ -1,0 +1,28 @@
+#sct-calculator {
+	align-items: center;
+	background: lightgray;
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+}
+#sct-calculator h1 {
+	font-size: 40px;
+}
+#sct-calculator .form-fields {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+#sct-calculator .form-fields label {
+	font-size: 20px;
+	font-weight: bold;
+}
+#sct-calculator .form-fields input {
+	height: 30px;
+}
+#sct-calculator .form-fields #btnSubmit {
+	background: black;
+	color: white;
+	height: 40px;
+	width: 80px;
+}

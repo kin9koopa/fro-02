@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  align-items: center;
+  background: #e1b12c;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+}
+header ul li {
+  color: #2f3640;
+  list-style: none;
+  font-size: 40px;
+}
+
+main {
+  background: #dcdde1;
+  height: 100vh;
+  padding: 5vh;
+}
+main #sct-formulario {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: space-between;
+}
+main #sct-formulario input {
+  border-radius: 5px;
+  border-color: #192a56;
+  color: #2f3640;
+  font-size: 18px;
+  height: 4vh;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 60%;
+}
+main #sct-formulario input[type=text], main #sct-formulario input[type=number], main #sct-formulario input[type=email] {
+  text-align: center;
+}
+main #sct-formulario button {
+  background: #192a56;
+  border-radius: 5px;
+  color: #f5f6fa;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  height: 4vh;
+  width: 60%;
+}
+main #sct-selector {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  padding-top: 20px;
+}
+main #sct-selector select {
+  border-radius: 5px;
+  border-color: #192a56;
+  color: #2f3640;
+  font-size: 18px;
+  height: 4vh;
+  margin-bottom: 2vh;
+  text-align: center;
+  width: 60%;
+}
+main #sct-selector button {
+  background: #e84118;
+  border-radius: 5px;
+  border-color: #e84118;
+  color: #f5f6fa;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  height: 4vh;
+  width: 60%;
+}/*# sourceMappingURL=base.css.map */
