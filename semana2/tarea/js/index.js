@@ -39,11 +39,6 @@ function init() {
 
 		estudiantesSlt.innerHTML = '';
 		nombresArray.forEach(llenarInfoSlct);
-
-		// console.log(nombresArray);
-		// console.log(apellidosArray);
-		// console.log(notasArray);
-		// console.log(emailsArray);
 	}
 
 	function llenarInfoSlct(element, indice) {
@@ -54,19 +49,45 @@ function init() {
 	}
 
 	function onMostrarBtn() {
-		// crear funcion que agarre la info selecionada del selector. will need to grab the indice value and show the info based off that
+		var selectValue = document.getElementById('estudiantesSlt'); //grabs the value of the dropdown option
+		var value = selectValue.value;
 
-		nombresArray.forEach(crearInfoEstudiante);
-	}
-
-	function crearInfoEstudiante(element, indice) {
 		var titulo = document.createElement('h1');
 		var emailInfo = document.createElement('h2');
+		var notaInfo = document.createElement('h2');
 
 		infoEstudiante.appendChild(titulo);
-		titulo.innerHTML = `Informacion de ${nombresArray[indice]} ${apellidosArray[indice]}`;
+		titulo.innerHTML = `Informacion de ${nombresArray[value]} ${apellidosArray[value]}`;
 
 		infoEstudiante.appendChild(emailInfo);
-		emailInfo.innerHTML = `Correo: ${emailsArray[indice]}`;
+		emailInfo.innerHTML = `Correo: ${emailsArray[value]}`;
+		infoEstudiante.appendChild(notaInfo);
+		notaInfo.innerHTML = `Nota: ${notasArray[value]}`;
 	}
+
+	// function crearInfoEstudiante(element, indice) {
+	// 	var titulo = document.createElement('h1');
+	// 	var emailInfo = document.createElement('h2');
+	// 	var notaInfo = document.createElement('h2');
+
+	// 	infoEstudiante.appendChild(titulo);
+	// 	titulo.innerHTML = `Informacion de ${nombresArray[indice]} ${apellidosArray[indice]}`;
+
+	// 	infoEstudiante.appendChild(emailInfo);
+	// 	emailInfo.innerHTML = `Correo: ${emailsArray[indice]}`;
+	// 	infoEstudiante.appendChild(notaInfo);
+	// 	notaInfo.innerHTML = `Nota: ${notasArray[indice]}`;
+	// }
+
+	// function onMostrarBtn() {
+	// 	// crear funcion que agarre la info selecionada del selector. will need to grab the indice value and show the info based off that maybe use the map method?
+
+	// 	var selectValue = document.getElementById('estudiantesSlt');
+	// 	var value = selectValue.value;
+
+	// 	nombresArray.forEach(crearInfoEstudiante);
+
+	// 	// nombresArray.push(crearInfoEstudiante);
+	// 	console.log(apellidosArray[value]); //im printing out the value from the select
+	// }
 }

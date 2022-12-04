@@ -8,6 +8,7 @@ header {
   align-items: center;
   background: #e1b12c;
   display: flex;
+  font-weight: bold;
   height: 10vh;
   justify-content: center;
 }
@@ -79,4 +80,16 @@ main #sct-selector button {
   margin-bottom: 20px;
   height: 4vh;
   width: 60%;
+}
+main #infoEstudiante {
+  align-items: center;
+  color: #2f3640;
+  display: flex;
+  flex-direction: column;
+}
+main #infoEstudiante h1 {
+  font-size: 40px;
+}
+main #infoEstudiante h2 {
+  font-size: 36px;
 }/*# sourceMappingURL=base.css.map */
