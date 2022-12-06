@@ -40,9 +40,6 @@ main #sct-formulario input {
   text-align: center;
   width: 60%;
 }
-main #sct-formulario input[type=text], main #sct-formulario input[type=number], main #sct-formulario input[type=email] {
-  text-align: center;
-}
 main #sct-formulario button {
   background: #192a56;
   border-radius: 5px;

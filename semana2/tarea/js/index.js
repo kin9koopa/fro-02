@@ -52,9 +52,15 @@ function init() {
 		var selectValue = document.getElementById('estudiantesSlt'); //grabs the value of the dropdown option
 		var value = selectValue.value;
 
+		llenarInfo(value);
+	}
+
+	function llenarInfo(value) {
 		var titulo = document.createElement('h1');
 		var emailInfo = document.createElement('h2');
 		var notaInfo = document.createElement('h2');
+
+		infoEstudiante.innerHTML = ''; // limpia el innerhtml
 
 		infoEstudiante.appendChild(titulo);
 		titulo.innerHTML = `Informacion de ${nombresArray[value]} ${apellidosArray[value]}`;
