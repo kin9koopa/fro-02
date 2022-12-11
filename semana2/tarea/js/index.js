@@ -14,9 +14,9 @@ function init() {
 	guardarBtn.onclick = onAgregarBtn;
 	mostrarBtn.onclick = onMostrarBtn;
 
-	var nombresArray = ['Amanda', 'Christopher'];
-	var apellidosArray = ['Sanchez', 'Valle'];
-	var notasArray = ['100', '87'];
+	var nombresArray = ['Amanda', 'Guillermo'];
+	var apellidosArray = ['Sanchez', 'Del Toro'];
+	var notasArray = ['100', '59'];
 	var emailsArray = ['asan@gmail.com', 'chrisval@hotmail.com'];
 
 	nombresArray.forEach(llenarInfoSlct);
@@ -56,18 +56,28 @@ function init() {
 	}
 
 	function llenarInfo(value) {
-		var titulo = document.createElement('h1');
+		var titulo = document.createElement('h2');
 		var emailInfo = document.createElement('h2');
 		var notaInfo = document.createElement('h2');
+		var aprobado = document.createElement('h2');
 
 		infoEstudiante.innerHTML = ''; // limpia el innerhtml
 
 		infoEstudiante.appendChild(titulo);
-		titulo.innerHTML = `Informacion de ${nombresArray[value]} ${apellidosArray[value]}`;
+		titulo.innerHTML = `Estudiante: ${nombresArray[value]} ${apellidosArray[value]}`;
 
 		infoEstudiante.appendChild(emailInfo);
 		emailInfo.innerHTML = `Correo: ${emailsArray[value]}`;
+
 		infoEstudiante.appendChild(notaInfo);
 		notaInfo.innerHTML = `Nota: ${notasArray[value]}`;
+
+		if (notasArray[value] >= 70) {
+			infoEstudiante.appendChild(aprobado);
+			aprobado.innerText = `Aprobado`;
+		} else {
+			infoEstudiante.appendChild(aprobado);
+			aprobado.innerText = `Reprobado`;
+		}
 	}
 }

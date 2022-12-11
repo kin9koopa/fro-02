@@ -84,9 +84,6 @@ main #infoEstudiante {
   display: flex;
   flex-direction: column;
 }
-main #infoEstudiante h1 {
-  font-size: 40px;
-}
 main #infoEstudiante h2 {
   font-size: 36px;
 }/*# sourceMappingURL=base.css.map */
