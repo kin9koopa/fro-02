@@ -1,0 +1,15 @@
+@keyframes move-bg {
+	from {
+		background-position: right;
+	}
+	to {
+		background-position: left;
+	}
+}
+
+#gameBody {
+	position: absolute;
+	width: 100%;
+	height: 70vh;
+	animation: move-bg 7s infinite linear;
+}

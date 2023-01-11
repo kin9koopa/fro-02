@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>carsJS</title>
+		<script type="module" src="js/main.js"></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/car.css" />
+		<link rel="stylesheet" href="css/background.css" />
+	</head>
+	<body>
+		<section id="controls">
+			<div class="addCar">
+				<select id="carsSlt">
+					<option value="1">Car 1</option>
+					<option value="2">Car 2</option>
+					<option value="3">Car 3</option>
+					<option value="4">Car 4</option>
+				</select>
+				<select id="speedSlt">
+					<option value="1">1</option>
+					<option value="5">2</option>
+					<option value="10">3</option>
+					<option value="20">4</option>
+				</select>
+				<button id="addBtn" class="button-82-pushable" role="button">
+					<span class="button-82-shadow"></span>
+					<span class="button-82-edge"></span>
+					<span class="button-82-front text"> ADD </span>
+				</button>
+			</div>
+			<div class="changeBG">
+				<select id="bgSelection">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+				</select>
+				<button id="changeBgBtn" class="button-82-pushable" role="button">
+					<span class="button-82-shadow"></span>
+					<span class="button-82-edge"></span>
+					<span class="button-82-front text"> Background </span>
+				</button>
+			</div>
+		</section>
+
+		<section id="gameBody"></section>
+	</body>
+</html>

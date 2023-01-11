@@ -28,25 +28,88 @@ function init() {
 		var total = 0;
 
 		var pagarLbl = document.createElement('h2');
-		infoSct.innerHTML = '';
 
 		switch (tipoCliente) {
 			case 'normal':
-				calcularClienteNormal(descuentoNormal, pHabitacion, noches);
+				infoSct.innerHTML = '';
+
+				if (descuentoNormal == 0) {
+					total = pHabitacion * noches;
+				} else if (descuentoNormal == 5) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.05;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 10) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.1;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 25) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.25;
+					total = subTotal - descuento;
+				} else {
+					console.log('Error');
+				}
 				infoSct.appendChild(pagarLbl);
+				pagarLbl.innerHTML = `Total por pagar: <span>$${total}</span> `;
 				break;
+
 			case 'vip':
-				calcularClienteVIP(descuentoNormal, pHabitacion, noches);
+				infoSct.innerHTML = '';
+
+				if (descuentoNormal == 0) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.05;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 5) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.1;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 10) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.15;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 25) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.3;
+					total = subTotal - descuento;
+				} else {
+					console.log('Error');
+				}
 				infoSct.appendChild(pagarLbl);
+				pagarLbl.innerHTML = `Total por pagar: <span>$${total}</span> `;
 				break;
+
 			case 'premium':
-				calcularClientePremium(descuentoNormal, pHabitacion, noches);
+				infoSct.innerHTML = '';
+
+				if (descuentoNormal == 0) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.1;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 5) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.15;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 10) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.2;
+					total = subTotal - descuento;
+				} else if (descuentoNormal == 25) {
+					subTotal = pHabitacion * noches;
+					descuento = subTotal * 0.35;
+					total = subTotal - descuento;
+				} else {
+					console.log('Error');
+				}
+
 				infoSct.appendChild(pagarLbl);
+				pagarLbl.innerHTML = `Total por pagar: <span>$${total}</span> `;
 				break;
+
 			default:
 				break;
 		}
-		pagarLbl.innerHTML = `Total por pagar: <span>$${total}</span> `;
 
 		var historial = {
 			fName: fName,
@@ -65,73 +128,6 @@ function init() {
 		nochesIn.value = '';
 	}
 
-	function calcularClienteNormal(descuentoNormal, pHabitacion, noches) {
-		var total = 0;
-		var subTotal = 0;
-		var descuento = 0;
-		if (descuentoNormal == 0) {
-			total = pHabitacion * noches;
-		} else if (descuentoNormal == 5) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.05;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 10) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.1;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 25) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.25;
-			total = subTotal - descuento;
-		} else {
-			console.log('Error');
-		}
-		return total;
-	}
-
-	function calcularClienteVIP(descuentoNormal, pHabitacion, noches) {
-		if (descuentoNormal == 0) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.05;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 5) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.1;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 10) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.15;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 25) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.3;
-			total = subTotal - descuento;
-		} else {
-			console.log('Error');
-		}
-	}
-
-	function calcularClientePremium(descuentoNormal, pHabitacion, noches) {
-		if (descuentoNormal == 0) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.1;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 5) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.15;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 10) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.2;
-			total = subTotal - descuento;
-		} else if (descuentoNormal == 25) {
-			subTotal = pHabitacion * noches;
-			descuento = subTotal * 0.35;
-			total = subTotal - descuento;
-		} else {
-			console.log('Error');
-		}
-	}
 	function onHistorialBtn() {
 		var historialInfo = document.createElement('div');
 		historialInfo.className = 'info-sct';

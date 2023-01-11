@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/index.js"></script>
+		<script src="js/historial.js"></script>
 		<title>Hotel</title>
 	</head>
 	<body>
@@ -16,17 +18,16 @@
 				type="number"
 				id="pHabitacionIn"
 				placeholder="Precio Habitacion"
-				value="100"
 			/>
 			<select id="descuentoNormalIn">
 				<option value="0">0%</option>
-				<option value="5">5%</option>
+				<option value="6">6%</option>
 				<option value="10">10%</option>
 				<option value="25">25%</option>
 			</select>
 			<input type="number" id="nochesIn" placeholder="Noches" />
 			<select id="tipoClienteIn">
-				<option value="normal" selected>Normal</option>
+				<option value="normal">Normal</option>
 				<option value="vip">VIP</option>
 				<option value="premium">Premium</option>
 			</select>
@@ -34,6 +35,5 @@
 			<button id="historialBtn" class="neubtn">Historial</button>
 		</section>
 		<section id="infoSct"></section>
-		<script src="js/main.js"></script>
 	</body>
 </html>
